@@ -30,7 +30,7 @@ export default function Header() {
     style,
   }: {
     label: string;
-    items: [{ label: string; path: string }];
+    items: { label: string; path: string }[];
     style?: string;
   }) => {
     return (
