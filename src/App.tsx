@@ -74,7 +74,6 @@ function App() {
     <>
       <div className="bg-white">
         <Header />
-
         <div className="relative h-fit mx-6 max-w-screen min-h-[400px] max-h-[600px]">
           <div className="absolute flex flex-col rounded-3xl h-full w-full z-10 p-4 justify-around text-center">
             <div>
