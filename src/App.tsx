@@ -76,12 +76,11 @@ function App() {
         <Header />
 
         <div className="relative h-fit mx-6 max-w-screen min-h-[400px] max-h-[600px]">
-          <div className="absolute flex flex-col rounded-3xl h-full w-full z-10 p-4 justify-between">
+          <div className="absolute flex flex-col rounded-3xl h-full w-full z-10 p-4 justify-around text-center">
             <div>
-              <p className="text-5xl text-white font-bold w-full max-w-lg">
+              <p className="text-5xl text-white font-bold ">
                 Mexican Conference on Pattern Recognition
               </p>
-
               <p className="text-xl font-bold text-white mt-4">
                 June 21-24, 2024
               </p>
@@ -89,7 +88,7 @@ function App() {
                 Xalapa, Veracruz, México
               </p>
             </div>
-            <button className="bg-cyan-500 text-white text-base font-medium px-5 py-2 rounded-full self-center md:self-start">
+            <button className="bg-cyan-500 text-white text-base font-medium px-5 py-2 rounded-full self-center">
               Get the eBook now
             </button>
           </div>
@@ -97,7 +96,6 @@ function App() {
             spaceBetween={0}
             slidesPerView={1}
             loop={true}
-            centeredSlides={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -105,8 +103,11 @@ function App() {
             modules={[Autoplay]}
             className="rounded-3xl aspect-square min-h-[400px] max-h-[500px]"
           >
-            {photos.map((photo, id) => (
-              <SwiperSlide key={id} className="h-min-[450px] h-max-[500px]">
+            {photos.map((photo, identifier) => (
+              <SwiperSlide
+                key={identifier}
+                className="h-min-[450px] h-max-[500px]"
+              >
                 <div className="h-full">
                   <img
                     src={photo}
@@ -120,8 +121,8 @@ function App() {
         </div>
         <InfiniteSlider />
         <div className="flex flex-col lg:flex-row">
-          <div className="rounded-3xl w-auto p-4 mx-6 bg-[#b7bffe] my-2 flex flex-col lg:mt-2 lg:my-0 lg:mb-0 lg:w-1/2">
-            <h2 className="text-2xl font-bold text-[#111321]">
+          <div className="rounded-3xl w-auto justify-between p-4 mx-6 bg-[#b7bffe] my-2 flex flex-col lg:mt-2 lg:my-0 lg:mb-0 lg:w-1/2">
+            <h2 className="text-2xl text-center font-bold text-[#111321]">
               About the congress
             </h2>
             <p className="text-lg my-4 text-[#111321]">
@@ -199,14 +200,14 @@ function App() {
             </ol>
           </div>
         </div>
-        <footer className="bg-white dark:bg-gray-900">
-          <div className="mx-auto w-screen max-w-full">
-            <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-              <div className="w-full">
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+        <footer className=" rounded-t-3xl bg-slate-500 mt-10">
+          <div className="mx-auto w-full">
+            <div className="flex flex-row w-full justify-center gap-8 px-4 py-6 lg:py-8">
+              <div className="w-fit text-center">
+                <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                   Links
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <ul className="text-slate-100 font-medium">
                   <li className="mb-4">
                     <a href="#" className=" hover:underline">
                       Home
@@ -260,10 +261,10 @@ function App() {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-center text-sm font-semibold text-white uppercase">
                   Contact
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <ul className="text-slate-100 dark:text-gray-400 font-medium text-center">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
                       Ansel Y. Rodríguez González
